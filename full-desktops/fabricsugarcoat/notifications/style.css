@@ -1,0 +1,33 @@
+#notifications * {
+    all: unset;
+    color: rgb(255, 255, 255);
+    font-family: "Jost*", "Cantarell", "Helvetica", "Arial", sans-serif;
+}
+
+#notification {
+    padding: 0.8rem;
+    border: solid 1px rgb(42, 43, 45);
+    border-radius: 1rem;
+    background-color: rgb(26, 28, 30);
+}
+
+#notification .summary {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#notification .body {
+    color: darker(rgb(255, 255, 255));
+    font-weight: normal;
+}
+
+#notifications button {
+    padding: 0.6rem;
+    font-weight: 600;
+    border-radius: 3rem;
+    background-color: rgb(42, 43, 45);
+}
+
+#notifications button:hover {
+    background-color: lighter(rgb(42, 43, 45));
+}
