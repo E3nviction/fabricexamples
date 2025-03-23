@@ -5,7 +5,7 @@ from fabric.widgets.datetime import DateTime
 from fabric.widgets.label import Label
 from fabric.widgets.svg import Svg
 from fabric.hyprland.widgets import ActiveWindow
-from fabric.utils import FormattedString
+from fabric.utils import FormattedString, get_relative_path
 from fabric.widgets.wayland import WaylandWindow as Window
 
 class MyWindow(Window):
@@ -14,12 +14,12 @@ class MyWindow(Window):
 			layer="overlay", # Sets the layer to bottom, so its behind windows
 			anchor="top left right", # Sets the window anchor to the top left
 			exclusivity="auto",
-			margin=(10, 10, 10, 10), # Sets the margins from the screen edges
+			margin=(10, 20, 10, 20), # Sets the margins from the screen edges
 			all_visible=True,
 			**kwargs
 		)
 
-		self.icon = Button(image=Svg("icon.svg", size=24), name="icon-button", h_align="start")
+		self.icon = Button(image=Svg(get_relative_path("icon.svg"), size=24), name="icon-button", h_align="start")
 
 		self.active = ActiveWindow(formatter=FormattedString("{'Desktop' if not win_title else win_title}"))
 
@@ -47,5 +47,5 @@ if __name__ == "__main__":
 	desktop_widget = MyWindow()
 	app = Application("quote-widget", desktop_widget)
 	# Sets the CSS
-	app.set_stylesheet_from_file("style.css")
+	app.set_stylesheet_from_file(get_relative_path("style.css"))
 	app.run()

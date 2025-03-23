@@ -6,6 +6,7 @@ from fabric.widgets.image import Image
 from fabric.widgets.label import Label
 from fabric.widgets.wayland import WaylandWindow as Window
 from fabric.audio import Audio
+from fabric.utils import get_relative_path
 import psutil
 import time
 import threading
@@ -18,7 +19,7 @@ class MyWindow(Window):
 			layer="bottom", # Sets the layer to bottom, so its behind windows
 			anchor="top left", # Sets the window anchor to the top left
 			exclusivity="none",
-			margin=(10, 10, 10, 10), # Sets the margins from the screen edges
+			margin=(10, 20, 10, 20), # Sets the margins from the screen edges
 			all_visible=True,
 			**kwargs
 		)
@@ -32,7 +33,7 @@ class MyWindow(Window):
 		self.audio.connect("changed", self.volume_changed)
 
 		self.mac_image = Image(
-			image_file="imac.png",
+			image_file=get_relative_path("imac.png"),
 		)
 
 		self.volume_scale = Scale(value=0, min_value=0, max_value=100, increments=(5, 5), name="volume-widget-slider", size=50, h_expand=True)
@@ -90,7 +91,7 @@ class MyWindow(Window):
 
 if __name__ == "__main__":
 	desktop_widget = MyWindow()
-	app = Application("desktop-widget", desktop_widget)
+	app = Application("top-panel", desktop_widget)
 	# Sets the CSS
-	app.set_stylesheet_from_file("style.css")
+	app.set_stylesheet_from_file(get_relative_path("style.css"))
 	app.run()

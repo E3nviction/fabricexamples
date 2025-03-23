@@ -2,6 +2,7 @@ from fabric import Application
 from fabric.widgets.box import Box
 from fabric.widgets.button import Button
 from fabric.widgets.wayland import WaylandWindow as Window
+from fabric.utils import get_relative_path
 import subprocess
 
 def get_random_quote():
@@ -38,5 +39,5 @@ if __name__ == "__main__":
 	desktop_widget = MyWindow()
 	app = Application("quote-widget", desktop_widget)
 	# Sets the CSS
-	app.set_stylesheet_from_file("style.css")
+	app.set_stylesheet_from_file(get_relative_path("style.css"))
 	app.run()
