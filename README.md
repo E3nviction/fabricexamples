@@ -8,13 +8,23 @@ This is a repository of example widgets for Fabric. Here you can find useful sni
 
 ## Contents
 
-* [Organicpaper](./full-desktops/organicpaper/)
-  * Inspired by [ChocolateBread's dotfiles](https://github.com/ChocolateBread799/dotfiles/tree/099a9a63fa4d3a105ed1e3254d31ca3264c413d7)
-![Organicpaper Preview](./assets/organicpaper.png)
-* [Fabric Sugarcoat](./full-desktops/fabricsugarcoat/)
-  * This is the original [Fabric example](https://github.com/Fabric-Development/fabric/tree/main/examples)
-![Fabric Sugarcoat Darsh Preview](./assets/fabricsugarcoat-darsh.png)
-![Fabric Sugarcoat Preview](./assets/fabricsugarcoat.png)
+* **Full Desktops**
+  * [Organicpaper](./full-desktops/organicpaper/)
+    * Inspired by [ChocolateBread's dotfiles](https://github.com/ChocolateBread799/dotfiles/tree/099a9a63fa4d3a105ed1e3254d31ca3264c413d7)
+  ![Organicpaper Preview](./assets/organicpaper.png)
+  * [Fabric Sugarcoat](./full-desktops/fabricsugarcoat/)
+    * This is the original [Fabric example](https://github.com/Fabric-Development/fabric/tree/main/examples)
+  ![Fabric Sugarcoat Darsh Preview](./assets/fabricsugarcoat-darsh.png)
+  ![Fabric Sugarcoat Preview](./assets/fabricsugarcoat.png)
+* **Widgets**
+  * [Fabric Examples](./widgets/fabricexamples/)
+    * App Launcher (A simple app launcher)
+    * Bar (A fully fledged top panel)
+    * Bluetooth Widget (A bluetooth manager widget)
+    * Desktop Widget (A clock for the desktop)
+    * Icon Browser (A browser for your gtk theme's icons)
+    * Notifications (A Notification manager)
+    * Side Panel (A dashboard-like widget showing information about your system)
 
 ## Acknowledgements
 
