@@ -10,7 +10,7 @@ import psutil
 import time
 import threading
 
-from gi.repository import GLib
+from gi.repository import GLib # type: ignore
 
 class MyWindow(Window):
 	def __init__(self, **kwargs):

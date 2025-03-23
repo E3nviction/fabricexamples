@@ -2,11 +2,7 @@ from fabric import Application
 from fabric.widgets.box import Box
 from fabric.widgets.button import Button
 from fabric.widgets.wayland import WaylandWindow as Window
-import time
 import subprocess
-import threading
-
-from gi.repository import GLib
 
 def get_random_quote():
 	quote = subprocess.run(["fortune", "-s"], stdout=subprocess.PIPE)
@@ -15,7 +11,7 @@ def get_random_quote():
 class MyWindow(Window):
 	def __init__(self, **kwargs):
 		super().__init__(
-			layer="overlay", # Sets the layer to bottom, so its behind windows
+			layer="bottom", # Sets the layer to bottom, so its behind windows
 			anchor="bottom left", # Sets the window anchor to the top left
 			exclusivity="none",
 			margin=(5, 5, 5, 5), # Sets the margins from the screen edges
